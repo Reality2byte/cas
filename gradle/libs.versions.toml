@@ -2,7 +2,9 @@
 aceEditor = "1.38.0"
 acmeClient = "3.5.1"
 amazonDax = "2.0.5"
-amazonSdk = "2.30.38"
+amazonSdk = "2.31.1"
+azureInsights = "3.7.1"
+azureKustoLog4j = "1.0.0"
 animateCss = "4.1.1"
 apacheCassandra = "4.19.0"
 apacheCxf = "4.1.1"
@@ -10,7 +12,7 @@ apacheFediz = "1.7.0"
 apacheIgnite = "2.17.0"
 apacheVelocityEngine = "2.4.1"
 apiGuardian = "1.1.2"
-aspectj = "1.9.22.1"
+aspectj = "1.9.23"
 awaitility = "4.3.0"
 awsmemcached = "1.2.2"
 azureIdentity = "1.15.4"
@@ -67,7 +69,7 @@ googleApiClient = "2.7.2"
 googleAuth = "1.5.0"
 googleCloudLogging = "3.21.4"
 googleCloudMonitor = "3.60.0"
-googleCloudSdk = "6.0.1"
+googleCloudSdk = "6.1.0"
 googleMapsGeoCoding = "2.2.0"
 googleZxing = "3.5.3"
 graalVm = "24.1.2"
@@ -82,7 +84,7 @@ hazelcastJClouds = "3.7.2"
 hazelcastZooKeeper = "4.0.2"
 hibernate = "6.6.10.Final"
 hibernateValidator = "8.0.2.Final"
-highlightJs = "11.10.0"
+highlightJs = "11.11.1"
 hikari = "6.2.1"
 hjson = "3.1.0"
 hsql = "2.7.4"
@@ -90,7 +92,7 @@ httpCore = "5.3.3"
 httpCore4 = "4.4.16"
 httpclient = "5.4.2"
 httpclient4 = "4.5.14"
-hypersistence = "3.9.4"
+hypersistence = "3.9.5"
 influxDb = "7.2.0"
 ipGeoLocation = "1.0.16"
 jackson = "2.18.3"
@@ -133,9 +135,9 @@ jsonassert = "1.5.3"
 jsoup = "1.19.1"
 jta = "2.0.1"
 jtds = "1.3.1"
-junit = "5.12.0"
+junit = "5.12.1"
 junitPioneer = "2.3.0"
-junitPlatform = "1.12.0"
+junitPlatform = "1.12.1"
 kafka = "3.9.0"
 kryo = "5.6.2"
 kryoSerializers = "0.45"
@@ -144,6 +146,7 @@ lettuceMod = "4.2.0"
 log4j = "2.24.3"
 logback = "1.5.17"
 logbackAccess = "1.5.17"
+loki = "0.9.32"
 lombok = "1.18.36"
 lucene = "10.1.0"
 mailgun = "1.1.4"
@@ -174,8 +177,8 @@ oktaHttpClient = "8.2.5"
 oktaSdk = "3.0.0"
 opensaml = "5.1.3"
 oracleJdbc = "23.7.0.25.01"
-oshi = "6.7.0"
-otel = "1.47.0"
+oshi = "6.7.1"
+otel = "1.48.0"
 pac4j = "6.1.1"
 permitio = "2.2.0"
 postgresql = "42.7.5"
@@ -186,14 +189,14 @@ saajImpl = "3.0.4"
 scimSdkClient = "1.27.1"
 semver = "3.1.0"
 sendGrid = "4.10.3"
-sentry = "8.3.0"
+sentry = "8.4.0"
 shibbolethUtilJavaSupport = "9.1.3"
 slackClient = "1.45.3"
 slf4j = "2.0.17"
 snakeYaml = "2.4"
 socketJsClient = "1.5.1"
 splunkLogging = "1.11.8"
-spring = "6.2.3"
+spring = "6.2.4"
 springBoot = "3.4.3"
 springBootAdmin = "3.4.5"
 springCloudAzure = "5.20.1"
@@ -205,11 +208,11 @@ springCloudEureka = "4.2.0"
 springCloudKubernetesConfig = "3.2.0"
 springCloudVault = "4.2.0"
 springCloudZookeeper = "4.2.0"
-springDataCassandra = "4.4.3"
-springDataCommons = "3.4.3"
+springDataCassandra = "4.4.4"
+springDataCommons = "3.4.4"
 springDataCosmosDb = "5.20.1"
-springDataMongoDb = "4.4.3"
-springDataRedis = "3.4.3"
+springDataMongoDb = "4.4.4"
+springDataRedis = "3.4.4"
 springDoc = "2.8.5"
 springIntegration = "6.4.2"
 springKafka = "3.3.3"
@@ -232,7 +235,7 @@ textMagic = "2.0.2456"
 thymeleaf = "3.1.3.RELEASE"
 thymeleafDialect = "3.2.0"
 tomcat = "10.1.39"
-twilio = "10.6.10"
+twilio = "10.7.0"
 unboundid = "7.0.2"
 undertow = "2.3.18.Final"
 whatWgFetch = "3.6.20"
@@ -252,10 +255,10 @@ zxcvbn = "4.4.2"
 # This section handles Gradle build classpath dependency versions
 #################################################################
 gradleGit = "2.5.0"
-gradleLombok = "8.12.2.1"
+gradleLombok = "8.13"
 gradleDependencyVersions = "0.52.0"
 gradleErrorProne = "4.1.0"
-gradleGraalVmNative = "0.10.5"
+gradleGraalVmNative = "0.10.6"
 gradleSonarqube = "6.0.1.5171"
 gradleNexusPublishing = "2.0.0"
 gradleJib = "3.4.4"
@@ -279,6 +282,8 @@ azure-identity = { module = "com.azure:azure-identity", version.ref = "azureIden
 azure-maps-geolocation = { module = "com.azure:azure-maps-geolocation", version.ref = "azureMapsGeoLocation" }
 azure-maps-search = { module = "com.azure:azure-maps-search", version.ref = "azureMapsSearch" }
 azure-spring-data-cosmos = { module = "com.azure:azure-spring-data-cosmos", version.ref = "springDataCosmosDb" }
+azure-insights-agent = { module = "com.microsoft.azure:applicationinsights-runtime-attach", version.ref = "azureInsights" }
+azure-kusto-log4j = { module = "com.microsoft.azure.kusto:azure-kusto-log4j", version.ref = "azureKustoLog4j" }
 base64-js = { module = "org.webjars.npm:base64-js", version.ref = "base64Js" }
 bcpkix-jdk18on = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bouncyCastle" }
 bcprov-jdk18on = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncyCastle" }
@@ -343,6 +348,7 @@ eureka-client = { module = "com.netflix.eureka:eureka-client", version.ref = "eu
 expressly = { module = "org.glassfish.expressly:expressly", version.ref = "jakartaElImpl" }
 fediz-core = { module = "org.apache.cxf.fediz:fediz-core", version.ref = "apacheFediz" }
 firebase-admin = { module = "com.google.firebase:firebase-admin", version.ref = "firebaseAdmin" }
+firehose = { module = "software.amazon.awssdk:firehose", version.ref = "amazonSdk" }
 fluent-logger = { module = "org.fluentd:fluent-logger", version.ref = "fluentd" }
 fluentd-log4j-appender = { module = "io.github.technologize:fluentd-log4j-appender", version.ref = "fluentdLog4j" }
 font-awesome = { module = "org.webjars:font-awesome", version.ref = "fontAwesome" }
@@ -477,6 +483,7 @@ log4j-jcl = { module = "org.apache.logging.log4j:log4j-jcl", version.ref = "log4
 log4j-layout-template-json = { module = "org.apache.logging.log4j:log4j-layout-template-json", version.ref = "log4j" }
 log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "log4j" }
 log4j-spring-cloud-config-client = { module = "org.apache.logging.log4j:log4j-spring-cloud-config-client", version.ref = "log4j" }
+log4j-loki = { module = "pl.tkowalcz.tjahzi:log4j2-appender-nodep", version.ref = "loki" }
 logback-access = { module = "ch.qos.logback:logback-access", version.ref = "logbackAccess" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
@@ -506,6 +513,7 @@ micrometer-registry-new-relic = { module = "io.micrometer:micrometer-registry-ne
 micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer" }
 micrometer-registry-signalfx = { module = "io.micrometer:micrometer-registry-signalfx", version.ref = "micrometer" }
 micrometer-registry-statsd = { module = "io.micrometer:micrometer-registry-statsd", version.ref = "micrometer" }
+micrometer-registry-otel = { module = "io.micrometer:micrometer-registry-otlp", version.ref = "micrometer" }
 micrometer-registry-wavefront = { module = "io.micrometer:micrometer-registry-wavefront", version.ref = "micrometer" }
 micrometer-tracing-bridge-brave = { module = "io.micrometer:micrometer-tracing-bridge-brave", version.ref = "micrometerOtel" }
 micrometer-tracing-bridge-otel = { module = "io.micrometer:micrometer-tracing-bridge-otel", version.ref = "micrometerOtel" }

@@ -153,7 +153,7 @@ public abstract class BasePersonAttributeDao implements PersonAttributeDao {
         return new HashMap<>(mappedAttributesBuilder);
     }
 
-    protected <T> Collection<T> flattenCollection(final Collection<? extends Object> source) {
+    protected <T> Collection<T> flattenCollection(final Collection<?> source) {
         val result = new ArrayList<T>();
         for (val value : source) {
             if (value instanceof Collection) {
