@@ -207,6 +207,7 @@ layout: null
     *   [Cerbos](/cas/{{ version }}/services/Service-Access-Strategy-Cerbos.html)
     *   [SCIM](/cas/{{ version }}/services/Service-Access-Strategy-SCIM.html)
     *   [Permit.io](/cas/{{ version }}/services/Service-Access-Strategy-PermitIO.html)
+    *   [Permify](/cas/{{ version }}/services/Service-Access-Strategy-Permify.html)
     *   [Open Policy Agent](/cas/{{ version }}/services/Service-Access-Strategy-OpenPolicyAgent.html)
     *   [AWS Verified Permissions](/cas/{{ version }}/services/Service-Access-Strategy-AWS-VerifiedPermissions.html)
 
@@ -336,6 +337,7 @@ layout: null
                 *   [REST](/cas/{{ version }}/mfa/YubiKey-Authentication-Registration-Rest.html)
                 *   [Custom](/cas/{{ version }}/mfa/YubiKey-Authentication-Registration-Custom.html)
         *   [RSA/Radius](/cas/{{ version }}/mfa/RADIUS-Authentication.html)
+        *   [Twilio](/cas/{{ version }}/mfa/Twilio-Multifactor-Authentication.html)
         *   [Google Authenticator](#mfagoogleauthn)
             *   [Overview](/cas/{{ version }}/mfa/GoogleAuthenticator-Authentication.html)
             *   [Device Registration](#mfagauthregistration)
@@ -695,6 +697,8 @@ layout: null
         *   [Sentry](/cas/{{ version }}/logging/Logging-Sentry.html)
         *   [SysLog](/cas/{{ version }}/logging/Logging-SysLog.html)
         *   [Splunk](/cas/{{ version }}/logging/Logging-Splunk.html)
+        *   [Loki](/cas/{{ version }}/logging/Logging-Loki.html)
+        *   [Azure Data Explorer](/cas/{{ version }}/logging/Logging-Azure-DataExplorer.html)
         *   [Logback](/cas/{{ version }}/logging/Logging-Logback.html)
     *   [Audits](#auditsoverview)
         *   [Overview](/cas/{{ version }}/audits/Audits.html)
@@ -705,6 +709,7 @@ layout: null
         *   [MongoDb](/cas/{{ version }}/audits/Audits-MongoDb.html)
         *   [Redis](/cas/{{ version }}/audits/Audits-Redis.html)
         *   [REST](/cas/{{ version }}/audits/Audits-REST.html)
+        *   [AWS Firehose](/cas/{{ version }}/audits/Audits-AWS-Firehose.html)
         *   [Custom](/cas/{{ version }}/audits/Audits-Custom.html)
 
 * [Monitoring & Statistics](#monitoroverview)
@@ -712,6 +717,7 @@ layout: null
     *   [Spring Boot Admin](/cas/{{ version }}/monitoring/Configuring-SpringBootAdmin.html)
     *   [JavaMelody](/cas/{{ version }}/monitoring/Configuring-Monitoring-JavaMelody.html)
     *   [Elastic APM](/cas/{{ version }}/monitoring/Configuring-Monitoring-ElasticAPM.html)
+    *   [Azure Insights](/cas/{{ version }}/monitoring/Configuring-Monitoring-AzureInsights.html)
     *   [Sentry](/cas/{{ version }}/logging/Logging-Sentry.html)
     *   [Metrics](#metricsoverview)
         *   [Overview](/cas/{{ version }}/monitoring/Configuring-Metrics.html)
@@ -848,6 +854,7 @@ layout: null
     *   [Sending Notifications](#notificationsoverview)
         *   [Overview](/cas/{{ version }}/notifications/Notifications-Configuration.html)
         *   [Google Firebase](/cas/{{ version }}/notifications/Notifications-Configuration-FCM.html)
+        *   [Apple Push Notification](/cas/{{ version }}/notifications/Notifications-Configuration-APN.html)
         *   [Slack](/cas/{{ version }}/notifications/Notifications-Configuration-Slack.html)
         *   [Custom](/cas/{{ version }}/notifications/Notifications-Configuration-Custom.html)
 

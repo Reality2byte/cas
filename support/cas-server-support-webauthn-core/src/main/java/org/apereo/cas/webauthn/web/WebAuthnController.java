@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -77,21 +78,18 @@ public class WebAuthnController extends BaseWebAuthnController {
     /**
      * Start registration and provide response entity.
      *
-     * @param username           the username
-     * @param displayName        the display name
-     * @param credentialNickname the credential nickname
-     * @param requireResidentKey the require resident key
-     * @param sessionTokenBase64 the session token base 64
-     * @param request            the request
-     * @param response           the response
+     * @param displayName            the display name
+     * @param credentialNickname     the credential nickname
+     * @param requireResidentKey     the require resident key
+     * @param sessionTokenBase64     the session token base 64
+     * @param authenticatedPrincipal the authenticated principal
+     * @param request                the request
+     * @param response               the response
      * @return the response entity
      * @throws Exception the exception
      */
     @PostMapping(value = WEBAUTHN_ENDPOINT_REGISTER, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> startRegistration(
-        @NonNull
-        @RequestParam("username")
-        final String username,
         @NonNull
         @RequestParam("displayName")
         final String displayName,
@@ -101,12 +99,13 @@ public class WebAuthnController extends BaseWebAuthnController {
         final boolean requireResidentKey,
         @RequestParam(value = "sessionToken", required = false, defaultValue = StringUtils.EMPTY)
         final String sessionTokenBase64,
+        final Principal authenticatedPrincipal,
         final HttpServletRequest request,
         final HttpServletResponse response)
         throws Exception {
-
+        
         val result = server.startRegistration(
-            username,
+            authenticatedPrincipal.getName(),
             Optional.of(displayName),
             Optional.ofNullable(credentialNickname),
             requireResidentKey
@@ -138,15 +137,14 @@ public class WebAuthnController extends BaseWebAuthnController {
     /**
      * Start authentication and provide response entity.
      *
-     * @param username the username
      * @return the response entity
      * @throws Exception the exception
      */
     @PostMapping(value = WEBAUTHN_ENDPOINT_AUTHENTICATE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> startAuthentication(
-        @RequestParam(value = "username", required = false)
-        final String username) throws Exception {
-        val request = server.startAuthentication(Optional.ofNullable(username));
+        final Principal authenticatedPrincipal) throws Exception {
+
+        val request = server.startAuthentication(Optional.ofNullable(authenticatedPrincipal).map(Principal::getName));
         if (request.isRight()) {
             return startResponse(new StartAuthenticationResponse(request.right().orElseThrow()));
         }
