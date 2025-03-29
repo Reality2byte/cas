@@ -129,6 +129,13 @@ ext.libraries = [
                     exclude(group: "org.springframework.integration", module: "spring-integration-core")
                 }
         ],
+        pushy              : [
+                dependencies.create(libs.pushy.get()) {
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                    exclude(group: "com.google.guava", module: "guava")
+                    exclude(group: "commons-codec", module: "commons-codec")
+                }
+        ],
         firebaseadmin              : [
                 dependencies.create(libs.google.api.client.get()) {
                     exclude(group: "org.slf4j", module: "slf4j-api")
@@ -144,6 +151,19 @@ ext.libraries = [
                     exclude(group: "ch.qos.logback", module: "logback-core")
                     exclude(group: "ch.qos.logback", module: "logback-classic")
                 }
+        ],
+        azureinsightsagent : [
+                dependencies.create(libs.azure.insights.agent.get()) {
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                    exclude(group: "ch.qos.logback", module: "logback-core")
+                    exclude(group: "ch.qos.logback", module: "logback-classic")
+                },
+        ],
+        azurekustolog4j : [
+            dependencies.create(libs.azure.kusto.log4j.get()) {
+                exclude(group: "org.slf4j", module: "slf4j-api")
+                exclude(group: "org.apache.logging.log4j", module: "log4j-core")
+            }
         ],
         elasticapmagent : [
                 dependencies.create(libs.apm.agent.attach.get()) {
@@ -251,6 +271,11 @@ ext.libraries = [
         ],
         splunklogging              : [
                 dependencies.create(libs.splunk.library.javalogging.get()) {
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                }
+        ],
+        loki              : [
+                dependencies.create(libs.log4j.loki.get()) {
                     exclude(group: "org.slf4j", module: "slf4j-api")
                 }
         ],
@@ -793,6 +818,16 @@ ext.libraries = [
                     exclude(group: "org.slf4j", module: "slf4j-api")
                 }
         ],
+        awsfirehose : [
+                dependencies.create(libs.firehose.get()) {
+                    exclude(group: "commons-logging", module: "commons-logging")
+                    exclude(group: "org.apache.httpcomponents", module: "httpclient")
+                    exclude(group: "org.apache.httpcomponents", module: "httpclient-cache")
+                    exclude(group: "com.fasterxml.jackson.core", module: "jackson-databind")
+                    exclude(group: "com.fasterxml.jackson.core", module: "jackson-core")
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                }
+        ],
         awsverifiedpermissions          : [
                 dependencies.create(libs.verifiedpermissions.get()) {
                     exclude(group: "commons-logging", module: "commons-logging")
@@ -1046,6 +1081,9 @@ ext.libraries = [
         jakarta                    : [
                 dependencies.create(libs.jakarta.validation.api.get()),
                 dependencies.create(libs.jakarta.xml.bind.api.get()) {
+                    transitive = false
+                },
+                dependencies.create(libs.jsr305.get()) {
                     transitive = false
                 },
                 dependencies.create(libs.jaxb.impl.get()) {
@@ -1730,6 +1768,11 @@ ext.libraries = [
                     exclude(group: "org.slf4j", module: "slf4j-api")
                     exclude(group: "commons-lang", module: "commons-lang")
                 },
+                dependencies.create(libs.micrometer.java21.get()) {
+                    exclude(group: "commons-logging", module: "commons-logging")
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                    exclude(group: "commons-lang", module: "commons-lang")
+                },
                 dependencies.create(libs.micrometer.observation.get()) {
                     exclude(group: "commons-logging", module: "commons-logging")
                     exclude(group: "org.slf4j", module: "slf4j-api")
@@ -1785,11 +1828,6 @@ ext.libraries = [
                     exclude(group: "org.slf4j", module: "slf4j-api")
                     exclude(group: "commons-lang", module: "commons-lang")
                 },
-                dependencies.create(libs.micrometer.registry.signalfx.get()) {
-                    exclude(group: "commons-logging", module: "commons-logging")
-                    exclude(group: "org.slf4j", module: "slf4j-api")
-                    exclude(group: "commons-lang", module: "commons-lang")
-                },
                 dependencies.create(libs.micrometer.registry.wavefront.get()) {
                     exclude(group: "commons-logging", module: "commons-logging")
                     exclude(group: "org.slf4j", module: "slf4j-api")
@@ -1801,6 +1839,11 @@ ext.libraries = [
                     exclude(group: "commons-lang", module: "commons-lang")
                 },
                 dependencies.create(libs.micrometer.registry.cloudwatch2.get()) {
+                    exclude(group: "commons-logging", module: "commons-logging")
+                    exclude(group: "org.slf4j", module: "slf4j-api")
+                    exclude(group: "commons-lang", module: "commons-lang")
+                },
+                dependencies.create(libs.micrometer.registry.otel.get()) {
                     exclude(group: "commons-logging", module: "commons-logging")
                     exclude(group: "org.slf4j", module: "slf4j-api")
                     exclude(group: "commons-lang", module: "commons-lang")
